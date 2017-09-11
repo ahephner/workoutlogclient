@@ -34,7 +34,7 @@ $(function() {
 			},
 			create: function() {
 				var itsLog = { 
-		        	desc: $("#log-description").val(),
+		        	description: $("#log-description").val(),
 		         	result: $("#log-result").val(),
 		         	def: $("#log-definition option:selected").text()
 		      	};
