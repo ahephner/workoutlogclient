@@ -4,8 +4,10 @@ $(function() {
          
             var username = $("#su_username").val();
             var password = $("#su_password").val();
+            var email = $("#su_email").val();
             var user = {user:  {username: username,
-                                 password: password }};
+                                 password: password, 
+                                email: email }};
 
             console.log(JSON.stringify(user))
 
@@ -34,6 +36,7 @@ $(function() {
 
                $("#su_username").val("");
                $("#su_password").val("");
+               $("su_email").val("");
                //routing
                $('a[href="#define"]').tab('show');
             })
