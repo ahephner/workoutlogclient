@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Workout Log</title>
+  <title>The Gun Club</title>
 
   <!-- Bootstrap -->
-  <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-  <link href="/bower_components/bootstrap/dist/css/custom-workout.css" rel="stylesheet">
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./main.css">
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -22,22 +22,29 @@
 </head>
 
 <body>
-
-
+<!-- <div class="image"></div> -->
+<div class="container">
+<div classs="top" id="head"> 
   <ul class="nav nav-tabs">
     <li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a>
       <!--logout too -->
     </li>
-    <li><a href="#define" class="disabled" data-toggle="tab">Define</a></li>
-    <li><a href="#log" class="disabled" data-toggle="tab">Log</a></li>
-    <li><a href="#history" class="disabled" data-toggle="tab">View History</a></li>
-    <a href="#update-log" data-toggle="tab" class="disabled" type="hidden"></a>
-  </ul>
+    <li><a href="#define" class="disabled" id="topLink" data-toggle="tab">Game</a></li>
+    <li><a href="#log" class="disabled" id="topLink" data-toggle="tab">Score</a></li>
+    <li><a href="#history" class="disabled" id="topLink" data-toggle="tab">View History</a></li>
+    <a href="#update-log" data-toggle="tab" class="disabled" id="topLink" type="hidden"></a>
+    <h1 class="text-right">The Gun Club</h1>
+    <h6 class="text-right">Sun's Up...</h6>
+   </ul>
+  </div>
+  </div>
 
   <div class="container">
-    <div class="tab-content">
+
+    <div class="tab-content col-lg-6">
       <div class="tab-pane active" id="home">
-        <h2>Workout Log</h2>
+        <h1>Welcome</h1>
+        <h4>Please sign in </h4>
         <div id="forLogin">
           <!-- have the class build the modals for these http://getbootstrap.com/javascript/#modals -->
           <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
@@ -49,25 +56,26 @@
       </div>
       <!-- DEFINE -->
       <div class="tab-pane fade" id="define">
-        <h2>Define</h2>
-          <label for="def-description">Description</label>
-          <textarea class="form-control" id="def-description" rows="3" ></textarea>
+        <h2>Choose Game</h2>
+          <!-- <label for="def-description">Description</label>
+          <textarea class="form-control" id="def-description" rows="3" ></textarea> -->
           <label for="def-logtype">Log work by</label>
           <select class="form-control" id="def-logtype">
-            <option>Time</option>
-            <option>Weight</option>
-            <option>Reps</option>
+            <option>Skeet</option>
+            <option>Five Stand</option>
+            <option>Trap</option>
           </select>
           <button id="def-save" class="btn btn-primary">Save</button>
+      
       </div>
-
-    
+      </div>
+    </div>
       <div class="tab-pane fade" id="log">
-        <h2>log!</h2>
+        <h2>Record Score</h2>
         <label>Result</label>
         <input type="text" class="form-control" id="log-result" />
-        <label>Workout Select:</label>
-        <select class="form-control" id="log-definition">
+       <!--  <label>Workout Select:</label>
+        <select class="form-control" id="log-definition"> -->
         </select>
         <label>notes</label>
         <textarea class="form-control" id="log-description" rows="3"></textarea>
@@ -76,14 +84,14 @@
 
        <!--UPDATING A WORKOUT SECTION-->
       <div class="tab-pane fade" id="update-log">
-        <h2>Log Update</h2>
+        <h2>Change Score add notes</h2>
         <label>Result</label>
         <input type="hidden" class="form-control" id="update-id" />
         <input type="text" class="form-control" id="update-result" />
-        <label>Workout Select:</label>
+       <!--  <label>Game</label>
         <select class="form-control" id="update-definition">
-        </select>
-        <label>notes</label>
+        </select> -->
+        <label>Judges notes</label>
         <textarea class="form-control" id="update-description" rows="3"></textarea>
         <br />
         <button id="log-update" class="btn btn-primary">Save</button>
@@ -142,6 +150,7 @@
    </div>
  </div>
 
+ 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
