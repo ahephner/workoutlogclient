@@ -4,7 +4,8 @@ $(function() {
          
             var username = $("#su_username").val();
             var password = $("#su_password").val();
-            var user = {user:  {username: username, password: password }};
+            var user = {user:  {username: username,
+                                 password: password }};
 
             console.log(JSON.stringify(user))
 

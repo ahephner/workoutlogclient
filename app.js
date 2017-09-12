@@ -1,6 +1,7 @@
 $(function(){
     var WorkoutLog = (function($, undefined){
-      var API_BASE = "https://ajh-workoutlog-server.herokuapp.com/api/";
+      var API_BASE = "http://localhost:3000/api/";
+      // https://ajh-workoutlog-server.herokuapp.com/api/
       var userDefinitions = [];
 
       var setAuthHeader = function(sessionToken) {
