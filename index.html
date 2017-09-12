@@ -24,32 +24,42 @@
 <body>
 <!-- <div class="image"></div> -->
 <div class="container">
+<div class="row">
 <div classs="top" id="head"> 
   <ul class="nav nav-tabs">
-    <li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a>
+    <li><a href="#home" id="loginout" class="disabled" style="color: white" data-toggle="tab">Login</a>
       <!--logout too -->
     </li>
-    <li><a href="#define" class="disabled" id="topLink" data-toggle="tab">Game</a></li>
-    <li><a href="#log" class="disabled" id="topLink" data-toggle="tab">Score</a></li>
-    <li><a href="#history" class="disabled" id="topLink" data-toggle="tab">View History</a></li>
-    <a href="#update-log" data-toggle="tab" class="disabled" id="topLink" type="hidden"></a>
+    <li><a href="#define" class="disabled" style="color: white" id="topLink" data-toggle="tab">Game</a></li>
+    <li><a href="#log" class="disabled" style="color: white" style="color: white" id="topLink" data-toggle="tab">Score</a></li>
+    <li><a href="#history" class="disabled" style="color: white" id="topLink" data-toggle="tab">View History</a></li>
+    <a href="#update-log" data-toggle="tab" class="disabled" style="color: white" id="topLink" type="hidden"></a>
+    <li><a href="#" class="disabled" style="color: white" id="topLink" data-toggle="tab">Rules</a></li>
+    <li><a href="#" class="disabled" style="color: white" id="topLink" data-toggle="tab">Rates</a></li>
     <h1 class="text-right">The Gun Club</h1>
     <h6 class="text-right">Sun's Up...</h6>
-   </ul>
+  </ul>
   </div>
   </div>
 
-  <div class="container">
-
-    <div class="tab-content col-lg-6">
-      <div class="tab-pane active" id="home">
+  <br>
+  <br>
+  
+  <div class="container" id="welcome">
+  <div class="row">
+  <div class="col-md-4"></div>
+    <div class="tab-content">
+      <div class="tab-pane active col-md-4" align="center" id="home">
         <h1>Welcome</h1>
         <h4>Please sign in </h4>
         <div id="forLogin">
           <!-- have the class build the modals for these http://getbootstrap.com/javascript/#modals -->
-          <button data-toggle="modal" data-target="#login-modal" class="btn btn-primary">Login</button>
-          <button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
+          <button data-toggle="modal" data-target="#login-modal" class="btn btn-danger">Login</button>
+          <button data-toggle="modal" data-target="#signup-modal" class="btn btn-danger">Sign Up</button>
+          <br>
+          <br>
         </div>
+        <div class="col-md-4"></div>
         <div id="forLogout" style="display:none;">
           <button class="btn btn-primary">Logout</button>
         </div>
@@ -66,10 +76,9 @@
             <option>Trap</option>
           </select>
           <button id="def-save" class="btn btn-primary">Save</button>
-      
       </div>
-      </div>
-    </div>
+
+    
       <div class="tab-pane fade" id="log">
         <h2>Record Score</h2>
         <label>Result</label>

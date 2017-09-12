@@ -1,6 +1,6 @@
 /*common elements*/
 h6{
-	color: rgb(175, 10, 10);
+	color: white;
 	font-family: "Lucida Sans Unicode", sans-serif; 
 }
 
@@ -11,9 +11,14 @@ h6{
 
 }
 #head h1{
-	color: rgb(175, 10, 10);
+	color: white;
 	font-weight: "Lucida Sans Unicode", sans-serif;
 }
+
+.nav {
+	padding-right: 15px;
+}
+
 #topLink a{
 	color: rgb(175, 10, 10);
 }
@@ -26,6 +31,12 @@ body{
 	background-position: bottom;
 	background-size: cover;
 }
+
+#home{
+	box-shadow: 0 0 20px 8px black;
+
+}
+
 
 div.image{
 	content: url('img/');
