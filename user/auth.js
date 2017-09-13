@@ -88,7 +88,18 @@ $(function() {
 
    // bind events
    $("#login").on("click", WorkoutLog.login);
-   $("#signup").on("click", WorkoutLog.signup);
+
+   $("#signup").on("click", function(){
+      var signUPass = $('#su_password').val() !== "";
+      var signUpEmail = $('#su_email').val() !== "";
+
+      if (signUpEmail && signUPass){
+          WorkoutLog.signup()
+       } else {
+         console.log('enter a value')
+       }
+   });
+
    $("#loginout").on("click", WorkoutLog.loginout);
 
    if (window.localStorage.getItem("sessionToken")) {
