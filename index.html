@@ -1,4 +1,4 @@
-<!-- pushed at 8:36am 9/13/17 -->
+<!-- pushed at 1:36pm 9/13 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,14 +12,18 @@
   <!-- Bootstrap -->
   <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./main.css">
-
-
+<script type="text/javascript">
+function dropdownTip(value){
+    console.log(value);
+        document.getElementById("result").innerHTML = value;
+    }</script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
 </head>
 
 <body>
@@ -28,15 +32,15 @@
 <div class="row">
 <div classs="top" id="head"> 
   <ul class="nav nav-tabs">
-    <li><a href="#home" id="loginout" class="disabled" style="color: white" data-toggle="tab">Login</a>
+    <li><a href="#home" id="loginout" class="disabled" style="color: red" data-toggle="tab">Login</a>
       <!--logout too -->
     </li>
-    <li><a href="#define" class="disabled" style="color: white" id="topLink" data-toggle="tab">Game</a></li>
-    <li><a href="#log" class="disabled" style="color: white" style="color: white" id="topLink" data-toggle="tab">Score</a></li>
-    <li><a href="#history" class="disabled" style="color: white" id="topLink" data-toggle="tab">View History</a></li>
-    <a href="#update-log" data-toggle="tab" class="disabled" style="color: white" id="topLink" type="hidden"></a>
-    <li><a href="#" class="disabled" style="color: white" id="topLink" data-toggle="tab">Rules</a></li>
-    <li><a href="#" class="disabled" style="color: white" id="topLink" data-toggle="tab">Rates</a></li>
+    <li><a href="#define" class="disabled" style="color: red" id="topLink" data-toggle="tab">Game</a></li>
+    <li><a href="#log" class="disabled" style="color: red" style="color: red" id="topLink" data-toggle="tab">Score</a></li>
+    <li><a href="#history" class="disabled" style="color: red" id="topLink" data-toggle="tab">View History</a></li>
+    <a href="#update-log" data-toggle="tab" class="disabled" style="color: red" id="topLink" type="hidden"></a>
+    <li><a href="#" class="disabled" style="color: red" id="topLink" data-toggle="tab">Rules</a></li>
+    <li><a href="#" class="disabled" style="color: red" id="topLink" data-toggle="tab">Rates</a></li>
     <h1 class="text-right">The Gun Club</h1>
     <h6 class="text-right">Sun's Up...</h6>
   </ul>
@@ -70,13 +74,18 @@
         <h2>Choose Game</h2>
           <!-- <label for="def-description">Description</label>
           <textarea class="form-control" id="def-description" rows="3" ></textarea> -->
-          <label for="def-logtype">Log work by</label>
-          <select class="form-control" id="def-logtype">
-            <option>Skeet</option>
-            <option>Five Stand</option>
-            <option>Trap</option>
-          </select>
-          <button id="def-save" class="btn btn-primary">Save</button>
+          <label for="def-logtype">Select</label>
+         <select onChange="dropdownTip(this.value)" name="search_type" style="margin-right:10px; margin-top:2px; color: red;">
+
+             <option value="">Select</option> 
+             <option value="A round of skeet consists of 25 shots from 8 different stations as explained below. A Skeet field consists of eight shooting stations, the first seven of which are spaced equidistant around an arc of a circle, and the eighth is half way between Stations 1 and 7, which are located at each end of the arc ">Skeet</option>
+              <option value="A round of trap includes 25 targets, where each shooter in squad fires at 5 targets from each of 5 shooting positions. A full squad is 5 shooters, although there is nothing wrong with shooting a round with one, two, three or four shooters.">Trap</option>
+              <option value="Five stand. Five Stand is a type of shotgun sport shooting similar to sporting clays, trap and skeet. There are five stations, or stands and six to eighteen strategically placed clay target throwers(called traps). Shooters shoot in turn at various combinations of clay birds">5 Stand</option>
+
+        </select>
+
+<div id="result" style="color: white; font-size: 18px; align-content: center; font-family: inherit;"></div>
+          <button id="def-save" class="btn btn-danger">Save</button>
       </div>
 
     
@@ -143,25 +152,33 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Sign Up</h4>
       </div>
+
       <div class="modal-body">
       <div class="alert alert-danger" role="alert" style="display:none;" id="su_error"></div>
-        <label for="su_username">Username:</label>
-        <input id="su_username" />
-        <label for="su_password">Password:</label>
-        <input type="password" id="su_password" />
-         <label for="su_email">Email:</label>
-        <input type="email" id="su_email" />
-           <label for="su_phone">Phone Number:</label>
-        <input type="text" id="su_phone" />
-      </div>
+      
+      <form  id="myForm" onsubmit="return validate()" role="form">
+        <div class="ss-item-required">  
+           <label class="entry" for="su_username">Username:</label>
+               <input id="su_username" type="text" name="go"/>
+        
+              <label class="entry" for="su_password">Password:</label>
+                <input type="password" id="su_password"/>
+        
+              <label class="entry" for="su_email">Email:</label>
+                <input type="email" id="su_email"/>
+        
+              <label for="su_phone">Phone Number:</label>
+                <input type="text" id="su_phone"/>
+         </div>
+
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button id="signup" type="button" class="btn btn-primary">Signup</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button id="signup" type="button" class="btn btn-danger">Signup</button>
       </div>
      </div>
    </div>
  </div>
-
+</form>
  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
@@ -171,6 +188,7 @@
     <script src="./user/auth.js"></script> 
     <script src="./workouts/define.js"></script>
     <script src="./workouts/log.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 
 <!--     <script src="./dist/bundle.js"></script>  -->
 </body>

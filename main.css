@@ -18,6 +18,10 @@ h6{
 .nav {
 	padding-right: 15px;
 }
+.modal-content{
+	background-color: rgba(57,57,57, 0.7);
+
+}
 
 #topLink a{
 	color: rgb(175, 10, 10);
@@ -25,12 +29,14 @@ h6{
 
 
 body{
-	background-image: url('img/cornfield.jpg');	/*Photo by Rasmus Landgreen on Unsplash*/
+	background-image: url('img/cornfield1.jpg');	/*Photo by Rasmus Landgreen on Unsplash*/
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: bottom;
 	background-size: cover;
 }
+
+
 
 #home{
 	box-shadow: 0 0 20px 8px black;
