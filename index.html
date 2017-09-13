@@ -39,8 +39,7 @@ function dropdownTip(value){
     <li><a href="#log" class="disabled" style="color: red" style="color: red" id="topLink" data-toggle="tab">Score</a></li>
     <li><a href="#history" class="disabled" style="color: red" id="topLink" data-toggle="tab">View History</a></li>
     <a href="#update-log" data-toggle="tab" class="disabled" style="color: red" id="topLink" type="hidden"></a>
-    <li><a href="#" class="disabled" style="color: red" id="topLink" data-toggle="tab">Rules</a></li>
-    <li><a href="#" class="disabled" style="color: red" id="topLink" data-toggle="tab">Rates</a></li>
+    <li><a href="#" class="rates" style="color: red" id="topLink" data-toggle="tab">Rates</a></li>
     <h1 class="text-right">The Gun Club</h1>
     <h6 class="text-right">Sun's Up...</h6>
   </ul>
@@ -66,7 +65,7 @@ function dropdownTip(value){
         </div>
         <div class="col-md-4"></div>
         <div id="forLogout" style="display:none;">
-          <button class="btn btn-primary">Logout</button>
+          <button class="btn btn-danger">Logout</button>
         </div>
       </div>
       <!-- DEFINE -->
@@ -89,7 +88,7 @@ function dropdownTip(value){
       </div>
 
     
-      <div class="tab-pane fade" id="log">
+      <div class="tab-pane fade col-md-4" id="log">
         <h2>Record Score</h2>
         <label>Result</label>
         <input type="text" class="form-control" id="log-result" />
@@ -98,7 +97,7 @@ function dropdownTip(value){
         </select>
         <label>notes</label>
         <textarea class="form-control" id="log-description" rows="3"></textarea>
-        <button id="log-save" class="btn btn-primary">Save</button>
+        <button id="log-save" class="btn btn-danger">Save</button>
       </div>
 
        <!--UPDATING A WORKOUT SECTION-->
@@ -113,7 +112,7 @@ function dropdownTip(value){
         <label>Judges notes</label>
         <textarea class="form-control" id="update-description" rows="3"></textarea>
         <br />
-        <button id="log-update" class="btn btn-primary">Save</button>
+        <button id="log-update" class="btn btn-danger">Save</button>
       </div>
 
       
@@ -139,8 +138,8 @@ function dropdownTip(value){
         <input type="password" id="li_password" />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-        <button id="login" type="button" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+        <button id="login" type="button" class="btn btn-danger">Login</button>
       </div>
      </div>
    </div>
@@ -158,16 +157,16 @@ function dropdownTip(value){
       
       <form  id="myForm" onsubmit="return validate()" role="form">
         <div class="ss-item-required">  
-           <label class="entry" for="su_username">Username:</label>
-               <input id="su_username" type="text" name="go"/>
+           <label class="entry" for="su_username">User</label>
+               <input id="su_username" placeholder="Username required" type="text" name="go"/>
         
-              <label class="entry" for="su_password">Password:</label>
-                <input type="password" id="su_password"/>
+              <label class="entry" for="su_password">Pass</label>
+                <input type="password" id="su_password" placeholder="Required for entry" />
         
-              <label class="entry" for="su_email">Email:</label>
+              <label class="entry" for="su_email">email</label>
                 <input type="email" id="su_email"/>
         
-              <label for="su_phone">Phone Number:</label>
+              <label for="su_phone">phone</label>
                 <input type="text" id="su_phone"/>
          </div>
 

@@ -96,7 +96,7 @@ $(function() {
       if (signUpEmail && signUPass){
           WorkoutLog.signup()
        } else {
-         console.log('enter a value')
+         alert("Please Enter a password and email");
        }
    });
 

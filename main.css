@@ -20,9 +20,16 @@ h6{
 }
 .modal-content{
 	background-color: rgba(57,57,57, 0.7);
+	display: table-caption;
+	width: 100%;
+	color: red;
+	align-items: left;
 
 }
 
+.modal-footer{
+	display: inline-flex; 
+}
 #topLink a{
 	color: rgb(175, 10, 10);
 }
@@ -43,7 +50,23 @@ body{
 
 }
 
+#log{
+	box-shadow: 10px 20px 20px 20px black;
+}
 
+#log h2{
+	color: white;
+}
+
+#log label{
+	color: white;
+}
+#define h2{
+	color: white;
+}
+#define label{
+	color: white;
+}
 div.image{
 	content: url('img/');
 }
