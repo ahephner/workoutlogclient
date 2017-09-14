@@ -25,7 +25,7 @@ $(function() {
 					history[i].result + " " +
 					// pass the log.id into the button's id attribute // watch your quotes!
 					"<div class='pull-right'>" +
-						"<button id='" + history[i].id + "' class='update btn btn-alert'>update</button>" +
+						"<button id='" + history[i].id + "' class='update'><strong>U</strong></button>" +
 						"<button id='" + history[i].id + "' class='remove'><strong>X</strong></button>" +
 					"</div></li>";
 				}
