@@ -70,21 +70,21 @@ function dropdownTip(value){
       </div>
       <!-- DEFINE -->
       <div class="tab-pane fade" id="define">
-        <h2>Choose Game</h2>
+        <h2>Rules</h2>
           <!-- <label for="def-description">Description</label>
           <textarea class="form-control" id="def-description" rows="3" ></textarea> -->
           <label for="def-logtype">Select</label>
          <select onChange="dropdownTip(this.value)" name="search_type" style="margin-right:10px; margin-top:2px; color: red;">
 
              <option value="">Select</option> 
-             <option value="A round of skeet consists of 25 shots from 8 different stations as explained below. A Skeet field consists of eight shooting stations, the first seven of which are spaced equidistant around an arc of a circle, and the eighth is half way between Stations 1 and 7, which are located at each end of the arc ">Skeet</option>
-              <option value="A round of trap includes 25 targets, where each shooter in squad fires at 5 targets from each of 5 shooting positions. A full squad is 5 shooters, although there is nothing wrong with shooting a round with one, two, three or four shooters.">Trap</option>
-              <option value="Five stand. Five Stand is a type of shotgun sport shooting similar to sporting clays, trap and skeet. There are five stations, or stands and six to eighteen strategically placed clay target throwers(called traps). Shooters shoot in turn at various combinations of clay birds">5 Stand</option>
+             <option value="A round of skeet consists of 25 shots from 8 different stations as explained below. A Skeet field consists of eight shooting stations, the first seven of which are spaced equidistant around an arc of a circle, and the eighth is half way between Stations 1 and 7, which are located at each end of the arc offered on fields 1-3. ">Skeet</option>
+              <option value="A round of trap includes 25 targets, where each shooter in squad fires at 5 targets from each of 5 shooting positions. A full squad is 5 shooters, although there is nothing wrong with shooting a round with one, two, three or four shooters. Offered on fields 3-4">Trap</option>
+              <option value="Five stand. Five Stand is a type of shotgun sport shooting similar to sporting clays, trap and skeet. There are five stations, or stands and six to eighteen strategically placed clay target throwers(called traps). Shooters shoot in turn at various combinations of clay birds Offered on fields 5 and 6">5 Stand</option>
 
         </select>
 
 <div id="result" style="color: white; font-size: 18px; align-content: center; font-family: inherit;"></div>
-          <button id="def-save" class="btn btn-danger">Save</button>
+          <button id="def-save" class="btn btn-danger">Next</button>
       </div>
 
     
@@ -92,8 +92,12 @@ function dropdownTip(value){
         <h2>Record Score</h2>
         <label>Result</label>
         <input type="text" class="form-control" id="log-result" />
-       <!--  <label>Workout Select:</label>
-        <select class="form-control" id="log-definition"> -->
+        <label>Field Select:</label>
+
+        <select class="form-control" id="field">
+        <option> Field 1</option>
+        <option> Field 2</option>  
+        <option> Field 3</option>
         </select>
         <label>notes</label>
         <textarea class="form-control" id="log-description" rows="3"></textarea>
@@ -183,10 +187,10 @@ function dropdownTip(value){
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="./app.js"></script>
+ <!--    <script src="./app.js"></script>
     <script src="./user/auth.js"></script> 
     <script src="./workouts/define.js"></script>
-    <script src="./workouts/log.js"></script>
+    <script src="./workouts/log.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
 
 <!--     <script src="./dist/bundle.js"></script>  -->

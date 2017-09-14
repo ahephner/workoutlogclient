@@ -23,6 +23,7 @@ $(function() {
 					// history[i].id + " - " + 
 					history[i].def + " - " + 
 					history[i].result + " " +
+					history[i].field + " " +
 					// pass the log.id into the button's id attribute // watch your quotes!
 					"<div class='pull-right'>" +
 						"<button id='" + history[i].id + "' class='update'><strong>U</strong></button>" +
@@ -36,7 +37,8 @@ $(function() {
 				var itsLog = { 
 		        	description: $("#log-description").val(),
 		         	result: $("#log-result").val(),
-		         	def: $("#log-definition option:selected").text()
+		         	def: $("#log-definition option:selected").text(),
+		         	field: $("#field option:selected").text()
 		      	};
 		      	var postData = { log: itsLog };
 		      	var logger = $.ajax({
