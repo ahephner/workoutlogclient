@@ -91,12 +91,12 @@ $(function() {
 
    $("#signup").on("click", function(){
       var signUPass = $('#su_password').val() !== "";
-      var signUpEmail = $('#su_email').val() !== "";
+      var signUpEmail = $('#su_username').val() !== "";
 
       if (signUpEmail && signUPass){
           WorkoutLog.signup()
        } else {
-         alert("Please Enter a password and email");
+         alert("Please Enter a password and username");
        }
    });
 
